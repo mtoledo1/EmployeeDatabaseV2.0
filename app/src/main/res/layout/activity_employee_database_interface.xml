@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="commrhardman23.httpsgithub.employeedatabase.EmployeeDatabaseInterface">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtxtName"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="Name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtxtPosition"
+        android:layout_below="@+id/edtxtName"
+        android:layout_alignLeft="@+id/edtxtName"
+        android:layout_alignStart="@+id/edtxtName"
+        android:layout_alignRight="@+id/edtxtName"
+        android:layout_alignEnd="@+id/edtxtName"
+        android:hint="Position" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edtxtEmployeeNum"
+        android:layout_below="@+id/edtxtPosition"
+        android:layout_alignLeft="@+id/edtxtPosition"
+        android:layout_alignStart="@+id/edtxtPosition"
+        android:hint="Employee Number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtxtWage"
+        android:layout_below="@+id/edtxtEmployeeNum"
+        android:layout_alignLeft="@+id/edtxtEmployeeNum"
+        android:layout_alignStart="@+id/edtxtEmployeeNum"
+        android:hint="Wage" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add To Database"
+        android:id="@+id/btnAdd"
+        android:layout_below="@+id/edtxtWage"
+        android:layout_centerHorizontal="true"
+        android:onClick="insertData" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtvwResult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/btnAdd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swipe left to search the employee database.\nSwipe right to delete employees from the database."
+        android:id="@+id/txtvwInstructions"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/txtvwResult"
+        android:gravity="center_horizontal" />
+</RelativeLayout>
